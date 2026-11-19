@@ -1,4 +1,4 @@
-class Buzz < Formula
+class BuzzCli < Formula
   desc "Agent-first CLI for the Buzz relay"
   homepage "https://github.com/block/buzz"
   url "https://github.com/block/buzz.git",
@@ -15,8 +15,9 @@ class Buzz < Formula
   end
 
   def install
-    system "cargo", "build", "--release", "--locked", "-p", "buzz-cli"
-    bin.install "target/release/buzz"
+    cd "crates/buzz-cli" do
+      system "cargo", "install", *std_cargo_args
+    end
   end
 
   test do
