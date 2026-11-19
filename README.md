@@ -23,7 +23,9 @@ needed — the CLI uses rustls.
 
 ## Update
 
-The formula pins an exact commit of `block/buzz` (`revision:`). To bump:
+The formula pins an exact commit (`revision:`) of the `sodawave/buzz` fork
+(branch `cli-version`: block/buzz `main` + the `--version` flag commit, until
+that lands upstream and the pin moves back to `block/buzz`). To bump:
 
 1. Update `revision:` to the new `main` SHA of `block/buzz`.
 2. Bump `version:` (workspace version of `crates/buzz-cli`).

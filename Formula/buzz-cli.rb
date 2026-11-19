@@ -1,8 +1,10 @@
 class BuzzCli < Formula
   desc "Agent-first CLI for the Buzz relay"
   homepage "https://github.com/block/buzz"
-  url "https://github.com/block/buzz.git",
-      revision: "5bd9d2c5d2912d9c8dbdcdf710d643a1d8ad91a2"
+  # Tracks the sodawave/buzz fork branch `cli-version` (block/buzz main + the
+  # --version flag commit) until the change lands upstream.
+  url "https://github.com/sodawave/buzz.git",
+      revision: "ddc56af5f1346cb54b0c50d605226d43a554b8c0"
   version "0.1.0"
   license "Apache-2.0"
 
